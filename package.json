@@ -1,0 +1,16 @@
+{
+  "name": "baldwin_server",
+  "version": "1.0.0",
+  "description": "Baldwin family home server.",
+  "main": "BaldwinServer1.0Backend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jacob Baldwin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "socket.io": "^2.1.1"
+  }
+}
