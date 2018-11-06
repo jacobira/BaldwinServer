@@ -19,5 +19,5 @@ if (auth = true) {
         client.emit("file-pull", request);
     };
     
-    client.emit("message-up", `Hello, server! This is ${username}; testing.`);
+    client.emit("message-up", `Hello, server! Username ${username} now active.`);
 };
