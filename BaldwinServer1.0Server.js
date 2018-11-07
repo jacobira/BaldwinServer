@@ -34,7 +34,8 @@ io.on('connection', (socket) => {
 		
 		
 		if (auth == true) {
-			socket.emit('keycard', socketUser); 
+
+			socket.emit('keycard', socketUser);
 			users[authAcc].active = true;
 			// console.log("if statement is working");
 			
@@ -49,6 +50,8 @@ io.on('connection', (socket) => {
 				console.log(`File pull initiated`);
 				console.log(`File pull backend has not yet been built...Sorry!`);
 			});
+
+			//FILE DUMP
 			socket.on('file-dump', (data) => {
 				// syntax for writing files:
 				// fs.writeFile(<filename.txt>, <filecontents>, <function(err)>)
@@ -58,7 +61,8 @@ io.on('connection', (socket) => {
 					}
 					else {
 						console.log('File dump initiated...');
-						socket.emit('message-down', 'File dump initiated on server...');
+						socket.emit('message-down', 'File dump initiated...');
+						socket.emit('message-down', `${data[0]} now being transferred.`)
 					}
 				});
 			});
